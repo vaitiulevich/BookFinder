@@ -1,0 +1,19 @@
+.inp-s{
+    padding: 12px;
+    width: 20%;
+    margin-right: 20px;
+    border-radius: 15px;
+    border: 0px;
+}
+
+.btn-s{
+    padding: 15px;
+    border-radius: 29px;
+    background-color: #ffffff;
+    border: 0px;
+}
+
+.btn-s:hover{
+    background-color: #5962b4;
+    color: #ffffff;
+}

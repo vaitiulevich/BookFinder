@@ -11,16 +11,22 @@ import Home from "./pages/Home/Home";
 import BookPage from "./pages/BookPage/BookPage";
 
 import routes from './routes'
+import SerchForm from './components/search/search';
+import AllBooks from './pages/allBooks/allBooks';
 
 function App() {
   return (
     <Provider store={store}>
     <div className="App">
       <Header/>
+      <div className='search'>
+        <SerchForm/>
+      </div>
       <div className='content-page'>
       <Routes>
       <Route>
         <Route exact path="/" element={<Home/>} />
+        <Route exact path="books/list" element={<AllBooks/>} />
         <Route path="/book/:ID" element={<BookPage/>} />
       </Route>
     </Routes>
