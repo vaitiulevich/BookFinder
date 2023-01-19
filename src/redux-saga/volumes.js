@@ -22,15 +22,15 @@ function* getBooks({ payload }) {
   }
 }
 
-function* getMoreBooks({ payload }) {
+function getMoreBooks({ payload }) {
   try {
     const searchTerm = payload;
 
-    const { totalItems, items } = yield call(googleBooksApi.getBooks, searchTerm);
+    const { totalItems, items } = call(googleBooksApi.getBooks, searchTerm);
 
-    yield put(getMoreBooksSuccess({ totalItems, items, searchTerm }));
+    put(getMoreBooksSuccess({ totalItems, items, searchTerm }));
   } catch ({ response: { data } }) {
-    yield put(getMoreBooksFailure(data.error));
+    put(getMoreBooksFailure(data.error));
   }
 }
 
